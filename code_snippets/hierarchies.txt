@@ -1,0 +1,28 @@
+----------QUERY1----------
+CREATE TABLE ADDRESS_HIER_INPUT (id int, key string, pred int, order_by int)
+USING com.sap.spark.vora
+OPTIONS (tableName "ADDRESS_HIER_INPUT",
+files "/user/vora/address_hierarchy.csv")
+
+----------QUERY2----------
+CREATE VIEW ADDRESS_HIER_VIEW as select key, node from hierarchy (
+USING ADDRESS_HIER_INPUT AS child
+JOIN PRIOR par ON child.pred = par.id
+ORDER SIBLINGS BY order_by ASC
+START WHERE pred = 0
+SET node
+) AS H
+
+----------QUERY3----------
+SELECT OD.COMPANYNAME, OD.GROSSAMOUNT, OD.CREATEDAT
+FROM  ( SELECT Children.key AS Country FROM ADDRESS_HIER_VIEW Children , ADDRESS_HIER_VIEW Parents 
+WHERE  IS_PARENT(Parents.node,Children.node) and Parents.key = 'EMEA'
+) C
+INNER JOIN ORDER_DETAILS OD
+ON C.Country = OD.COUNTRY
+ORDER BY OD.CREATEDAT
+
+----------QUERY4----------
+SELECT Children.key
+FROM ADDRESS_HIER_VIEW Children, ADDRESS_HIER_VIEW Parents
+WHERE IS_SIBLING(Parents.node, Children.node) and Parents.key='EMEA'
