@@ -195,7 +195,7 @@ Query 4
     SELECT * FROM FREQUENT_ITEMS
     ```
 
-![Alt text](https://github.wdf.sap.corp/refapps/vine/blob/master/documentation/machine_learning/images/Frequencies%20of%20Items%20bought%20together.JPG "Optional title").
+![Alt text](./images/Frequencies%20of%20Items%20bought%20together.JPG "Optional title").
       
 
 

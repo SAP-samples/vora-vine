@@ -93,3 +93,6 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
  - [SAP Vora - SAP HANA Integration](./documentation/vora_hana_integration/README.md)
  - [Machine Learning (K means and FP growth)](./documentation/machine_learning/README.md)
  - [SAP Lumira Visualization](./documentation/lumira/README.md)
+
+## Support
+For any question/clarification or report an issue in VINE please [create issue](https://github.com/SAP/vora-vine/issues/new)
