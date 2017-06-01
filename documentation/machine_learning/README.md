@@ -199,7 +199,7 @@ Query 4
       
 
 
-![Alt text](https://github.wdf.sap.corp/refapps/vine/blob/master/documentation/machine_learning/images/Frequencies_Pie.JPG "Optional title")
+![Alt text](./images/Frequencies_Pie.JPG "Optional title")
 
 Query 5
 - Association Rules [ Given the frequent itemsets, we are generating association rules that help us determine which item(s) 
@@ -209,7 +209,7 @@ tend to come together with some frequent itemset]
     SELECT * FROM RULES
     ```
          
-![Alt text](https://github.wdf.sap.corp/refapps/vine/blob/master/documentation/machine_learning/images/Association%20Rules.JPG "Optional title")
+![Alt text](./images/Association%20Rules.JPG "Optional title")
 
 
 Query 6
@@ -221,5 +221,5 @@ If someone buy products A, B then there is a probability of buying C and E too.
     ```sql
     SELECT consequent FROM RULES WHERE antecedent = "Printer AllRound,Laser STAR"
     ```
-![Alt text](https://github.wdf.sap.corp/refapps/vine/blob/master/documentation/machine_learning/images/Recommendation.JPG "Optional title").
+![Alt text](./images/Recommendation.JPG "Optional title").
      

@@ -79,7 +79,7 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
     
    4. Push the files present in the data folder to HDFS.
     
-      `hdfs dfs –put <filename>`
+      `hdfs dfs –put <filename> /user/<vora_user>`
     	
    5. Check if the files are correctly loaded in to HDFS.
     
