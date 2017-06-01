@@ -46,7 +46,3 @@ Query 3
       SELECT * FROM TOP_CUSTOMERS_SALES_VOLUME
      ```
   ![Alt text](./images/image02.PNG "Optional title")
-
-```
-Alernate Option : The Queries mentioned above can be run from SAP Vora SQL Editor ([jumpbox]:9443/web/#/sql-editor).
-```
