@@ -1,0 +1,6 @@
+#{"name":"EMPLOYEES","property_indexes":["NAME","SALARY"]}
+["EMPLOYEE",1,[["NAME","Tom"]],[["HAS_POSITION",3]]]
+["EMPLOYEE",2,[["NAME","Jack"]],[["HAS_POSITION",3]]]
+["MANAGER",3,[["SALARY",50000]],[["REPORTS_TO",4]]]
+["DIRECTOR",4,[["SALARY",70000]],[]]
+["EMPLOYEE",5,[["NAME","Mary"]],[["HAS_POSITION",4]]]
