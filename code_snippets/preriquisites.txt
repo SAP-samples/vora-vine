@@ -1,15 +1,15 @@
 
 ----------QUERY1----------
 CREATE TABLE ADDRESSES (ADDRESSID string, CITY string, POSTALCODE string, STREET string, BUILDING string, COUNTRY string, REGION string, ADDRESSTYPE string, STARTDATE date, ENDDATE date, LATITUDE string, LONGITUD string)
-USING com.sap.spark.vora
+USING com.sap.spark.engines.relational
 OPTIONS (tableName "ADDRESSES",
-files "/user/vora/addresses.parquet")
+files "/user/vora/addresses.parquet" , format "parquet")
 
 ----------QUERY2----------
 CREATE TABLE BUSINESS_PARTNER (PARTNERID string, PARTNERROLE string, EMAILADDRESS string, PHONENUMBER string, FAXNUMBER string, WEBADDRESS string, ADDRESSID string, COMPANYNAME string, LEGALFORM string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, CURRENCY string)
-USING com.sap.spark.vora
+USING com.sap.spark.engines.relational
 OPTIONS (tableName "BUSINESS_PARTNER",
-files "/user/vora/businessPartner.orc")
+files "/user/vora/businessPartner.orc" , format "orc")
 
 ----------QUERY3----------
 CREATE TABLE SO_HEADER (SALESORDERID string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, NOTEID string, PARTNERID string, CURRENCY string, GROSSAMOUNT decimal(15,2), NETAMOUNT decimal(15,2), TAXAMOUNT decimal(15,2), LIFECYCLESTATUS string, BILLINGSTATUS string, DELIVERYSTATUS string) 

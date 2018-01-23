@@ -32,7 +32,7 @@
 
    ![Alt text](./images/6.jpg "Optional title")
  
-3. Click on the “visualize” button on the right-hand side. It will load the graphical representation of the graph.
+3. Switch to “VISUALIZATION” tab. It will load the graphical representation of the graph.
 
    ![Alt text](./images/7.jpg "Optional title")
  

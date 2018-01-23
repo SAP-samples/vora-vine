@@ -26,12 +26,8 @@
 
    ![Alt text](./images/3.jpg "Optional title")
 
-5. Click on the file path, you have chosen. You can see the content of your json file.
-
-   ![Alt text](./images/4.jpg "Optional title")
-
-6. Click finish. It will create PRODUCT_REVIEWS collection. It will derive the schema from the first record.
-7. Click on preview tab to see the data in collection.
+5. Click finish. It will create PRODUCT_REVIEWS collection. It will derive the schema from the first record.
+6. Click on preview tab to see the data in collection.
 
    ![Alt text](./images/5.jpg "Optional title")
 
@@ -47,7 +43,7 @@
 
    ![Alt text](./images/7.jpg "Optional title")
    
-5. 3.5.	Now in the SAMPLE_VIEW, add PRODUCT_REVIEWS as data source and place it in the canvas.
+5. Now in the SAMPLE_VIEW, add PRODUCT_REVIEWS as data source and place it in the canvas.
 
    ![Alt text](./images/8.jpg "Optional title")
    
@@ -70,15 +66,16 @@
 
      ![Alt text](./images/11.jpg "Optional title")
 
-### Join between collection and in-memory table
+### Join between collection and relational table
 
-1.	Create in-memory BUSINESS_PARTNER_MOD TABLE using below query in SQL Editor.
+1.	Create in-memory BUSINESS_PARTNER_MOD TABLE using below query in SQL Editor if it is not exist.
 
     ```sql
        CREATE TABLE BUSINESS_PARTNER_MOD (PARTNERID string, PARTNERROLE string, EMAILADDRESS string, PHONENUMBER string, FAXNUMBER string, WEBADDRESS string, ADDRESSID string, COMPANYNAME string, LEGALFORM string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, CURRENCY string)
-       USING com.sap.spark.vora
+       USING com.sap.spark.engines.relational
        OPTIONS (tableName "BUSINESS_PARTNER",
-       files "/user/vora/businessPartner.orc")
+       files "/user/vora/businessPartner.orc",
+       format "orc")
     ```
    
 2. Go to the modeler tab. Create view and name it as “SAMPLE_VIEW_2”

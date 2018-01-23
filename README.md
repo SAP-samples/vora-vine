@@ -8,6 +8,7 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 - Sample data
 - SQL statements
 - Documentation
+- Tutorials
 - Apache Zeppelin Notebooks
 
 
@@ -15,13 +16,13 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 ## Prerequisites
 
 1. SAP Vora Setup- Follow one of the below documentation and setup your SAP Vora environment
-   - [SAP Vora 1.4 Developer Edition](https://www.sap.com/developer/how-tos/2017/02/vora-ova-install.html) 
-       > Please note that *SAP Lumira Visualization Feature Deep Dive section below cannot be executed in SAP Vora Developer Edition
-       > due to connectivity restrictions in SAP Vora Developer Edition*.  
+   - [SAP Data Hub Developer Edition](https://blogs.sap.com/2017/12/06/sap-data-hub-developer-edition/) 
+       > Please note that *SAP Lumira Visualization Feature Deep Dive section below cannot be executed in SAP Data Hub Developer Edition
+       > due to connectivity restrictions in SAP Data Hub Developer Edition*.  
        
     OR
     
-    - [SAP Vora 1.4  Cluster](https://help.sap.com/http.svc/rc/f09ec811fe634f588647c342cac84c38/1.4/en-US/SAP_Vora_Installation_Admin_Guide_1.4_en.pdf)  
+    - [SAP Vora 2.0  Cluster](https://help.sap.com/http.svc/rc/f09ec811fe634f588647c342cac84c38/2.0/en-US/SAP_Vora_Installation_Admin_Guide_2.0_en.pdf)  
   
     
 2. SAP Lumira
@@ -33,12 +34,12 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 3. Creating necessary tables and view
     - Download the Apache Zeppelin notebook from following link [prerequisites](./zeppelin_notebooks/prerequisites.json)
 
-    - Upload the notebook to Apache Zeppelin - < jumpbox >:9099 in case of vora cluster and < ip address >:9099 in case of dev edition, 
+    - Upload the notebook to Apache Zeppelin - < hostname >:9099.
       for help follow the steps in the [link](https://zeppelin.apache.org/docs/0.6.0/quickstart/explorezeppelinui.html)
 
     - The notebook will open up. 
     
-    - *If you are using SAP Vora 1.4 Cluster then change the interpreter to %vora from %jdbc.( by default it has been set to %jdbc   in all the Apache Zeppelin notebooks) as shown in image below*
+    - *If you are using SAP Vora 2.0 Cluster then change the interpreter to %vora from %vorathrift.( by default it has been set to %vorathrift   in all the Apache Zeppelin notebooks) as shown in image below*
     
     ![Alt text](./documentation/basic_sql/images/interpreter.png "Optional title")
     - Now you can click on Run all paragraphs button on top of the page to create tables in SAP Vora using data from the existing             HDFS files preloaded on the instance. 
@@ -50,17 +51,31 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 
 The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster is different. Please follow the respective section below based on your SAP Vora setup
 
-### SAP Vora Developer Edition
+### SAP Data Hub Developer Edition
+
+   Follow the below steps once your container is up and running
 
    1. Download all the files from [here](../../archive/master.zip)
    
-   2. Copy the files present in the data folder to Shared folder of your Host System.
+   2. Copy the files present in the data folder to your container using the following command:-
    
-   3. Push the files present in the data folder to HDFS.
+      `docker cp data <container name>:/tmp/data/`
+      
+   3. Start the bash shell of the container using the following command:-
+   
+      `docker exec -ti <Container id eg: 89a19a7df5e2> /bin/bash`
+   
+   4. Push the files present in the data folder to HDFS.
     
-      `hdfs dfs –put /mnt/hgfs/<shared_folder_name>/<filename> /user/vora`
+      `hdfs dfs –put /tmp/data/* /user/vora`
+      
+      *If the folder "user/vora" doesnt exist then , do create the folder structure using the following command*
+      
+      `hdfs dfs -mkdir /user`
+      
+      `hdfs dfs -mkdir /user/vora`
     	
-   4. Check if the files are correctly loaded in to HDFS.
+   5. Check if the files are correctly loaded in to HDFS.
     
       `hdfs dfs -ls /user/vora`
 
@@ -90,8 +105,7 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
 
  - [Basic SQL](./documentation/basic_sql/README.md)
  - [Hierachies](./documentation/hierarchies/README.md) 
- - [SAP Vora - SAP HANA Integration](./documentation/vora_hana_integration/README.md)
- - [Machine Learning (K means and FP growth)](./documentation/machine_learning/README.md)
+ - [Vora Modeler](./tutorials)
  - [SAP Lumira Visualization](./documentation/lumira/README.md)
 
 ## Support

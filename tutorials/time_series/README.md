@@ -29,7 +29,7 @@ and partition scheme using the following command. Click on ‘Execute all’.
 5. Add columns by clicking on ‘add’ button as show below. Add three column TEMP, HUM, and TS in the table.
 6. Column with timestamp or date as data type can be selected as period column. Check period check box against TS column.
 
-   ![Alt text](./images/4.png "Optional title")
+   ![Alt text](./images/4.jpg "Optional title")
 
 7. In the right panel we can add additional property for series table. Add partition scheme and partition parameter.
 8. Specify the range expression as given below.
