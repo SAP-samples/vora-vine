@@ -16,9 +16,7 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 ## Prerequisites
 
 1. SAP Vora Setup- Follow one of the below documentation and setup your SAP Vora environment
-   - [SAP Data Hub Developer Edition](https://blogs.sap.com/2017/12/06/sap-data-hub-developer-edition/) 
-       > Please note that *SAP Lumira Visualization Feature Deep Dive section below cannot be executed in SAP Data Hub Developer Edition
-       > due to connectivity restrictions in SAP Data Hub Developer Edition*.  
+   - [SAP Data Hub Developer Edition](https://blogs.sap.com/2017/12/06/sap-data-hub-developer-edition/)  
        
     OR
     
@@ -105,8 +103,9 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
 
  - [Basic SQL](./documentation/basic_sql/README.md)
  - [Hierachies](./documentation/hierarchies/README.md) 
- - [Vora Modeler](./tutorials)
- - [SAP Lumira Visualization](./documentation/lumira/README.md)
+ - [SAP Vora - SAP HANA Integration](./documentation/vora_hana_integration/README.md)
+ - [SAP Lumira Visualization](./tutorials/lumira/README.md)
+ - [Vora Modeler Tutorials](./tutorials)
 
 ## Support
 For any question/clarification or report an issue in VINE please [create issue](https://github.com/SAP/vora-vine/issues/new)

@@ -1,0 +1,26 @@
+----------QUERY1----------
+CREATE TABLE SHINE_PRODUCTS
+USING com.sap.spark.hana
+OPTIONS (
+path "sap.hana.democontent.epm.data::MD.Products",
+dbschema "SAP_HANA_DEMO",
+host "<host ipaddress>",
+instance "<instance-no>",
+user "<username>",
+passwd "<password>"
+tenantdatabase "<dbname>"
+)
+
+----------QUERY2----------
+CREATE VIEW ORDER_ITEM_DETAILS AS
+SELECT SO_HEADER.SALESORDERID , CREATEDAT , CATEGORY , SO_ITEM.PRODUCTID , QUANTITY  
+FROM  SO_HEADER
+INNER JOIN SO_ITEM 
+ON SO_HEADER.SALESORDERID = SO_ITEM.SALESORDERID 
+INNER JOIN SHINE_PRODUCTS 
+ON SO_ITEM.PRODUCTID = SHINE_PRODUCTS.PRODUCTID
+ORDER BY SALESORDERID
+USING com.sap.spark.view
+
+----------QUERY3----------
+SELECT * FROM ORDER_ITEM_DETAILS
