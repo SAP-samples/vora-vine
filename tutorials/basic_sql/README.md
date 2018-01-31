@@ -21,15 +21,30 @@
 
    ![Alt text](./images/4.jpg "Optional title")
    
-7. Create the BUISINESS_PARTNER_MOD table using the step 1.2 to 1.6. File which we are using here as input is “businessPartner.orc”.
+7. Create the BUISINESS_PARTNER_MOD table using the steps 1.2 to 1.6 or create it directly by running the below query in SQL editor.
+
+   ```sql
+   CREATE TABLE BUSINESS_PARTNER_MOD (PARTNERID string, PARTNERROLE string, EMAILADDRESS string, PHONENUMBER string, FAXNUMBER string, WEBADDRESS string, ADDRESSID string, COMPANYNAME string, LEGALFORM string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, CURRENCY string) USING com.sap.spark.engines.relational OPTIONS (tableName "BUSINESS_PARTNER", files "/user/vora/businessPartner.orc", format "orc");
+
+   ```
 
    ![Alt text](./images/5.jpg "Optional title")
    
-8. Similarly create the SO_HEADER_MOD table using “soHeaderData.csv”. File Path would be (/user/vora/soHeaderData.csv).
+8. Similarly Create the SO_HEADER_MOD table directly by running the below query in SQL editor.
+
+   ```sql
+   CREATE TABLE SO_HEADER_MOD (SALESORDERID string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, NOTEID string, PARTNERID string, CURRENCY string, GROSSAMOUNT decimal(15,2), NETAMOUNT decimal(15,2), TAXAMOUNT decimal(15,2), LIFECYCLESTATUS string, BILLINGSTATUS string, DELIVERYSTATUS string) USING com.sap.spark.engines.relational OPTIONS (tableName "SO_HEADER", files "/user/vora/soHeaderData.csv");
+   
+   ```
 
    ![Alt text](./images/6.jpg "Optional title")
    
-9. Create SO_ITEM_MOD table using “soItemData.csv”.
+9. Create SO_ITEM_MOD table directly by running the below query in SQL editor.
+
+   ```sql
+   CREATE TABLE SO_ITEM_MOD (SALESORDERID string, SALESORDERITEM string, PRODUCTID string, NOTEID string,  CURRENCY string, GROSSAMOUNT decimal(15,2), NETAMOUNT decimal(15,2), TAXAMOUNT decimal(15,2), ITEMATPSTATUS string, OPITEMPOS string, QUANTITY decimal(15,2), QUANTITYUNIT string, DELIVERYDATE date ) USING com.sap.spark.engines.relational OPTIONS (tableName "SO_ITEM", files "/user/vora/soItemData.csv");
+   
+   ```
 
    ![Alt text](./images/8.jpg "Optional title")
 

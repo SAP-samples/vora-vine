@@ -24,6 +24,13 @@
 
 1. Go to SQL Editor and create the tables “BUSINESS_PARTNER_MOD” & “SO_HEADER_MOD” using commands given below. Click on “execute all”.
 
+   ```sql
+   CREATE TABLE BUSINESS_PARTNER_MOD (PARTNERID string, PARTNERROLE string, EMAILADDRESS string, PHONENUMBER string, FAXNUMBER string, WEBADDRESS string, ADDRESSID string, COMPANYNAME string, LEGALFORM string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, CURRENCY string) USING com.sap.spark.engines.relational OPTIONS (tableName "BUSINESS_PARTNER", files "/user/vora/businessPartner.orc", format "orc");
+   
+   CREATE TABLE SO_HEADER_MOD (SALESORDERID string, CREATEDBY_EMPLOYEEID string, CREATEDAT date, CHANGEDBY_EMPLOYEEID string, CHANGEDAT date, NOTEID string, PARTNERID string, CURRENCY string, GROSSAMOUNT decimal(15,2), NETAMOUNT decimal(15,2), TAXAMOUNT decimal(15,2), LIFECYCLESTATUS string, BILLINGSTATUS string, DELIVERYSTATUS string) USING com.sap.spark.engines.relational OPTIONS (tableName "SO_HEADER", files "/user/vora/soHeaderData.csv");
+   
+   ```
+
    ![Alt text](./images/2.jpg "Optional title")
    
 2. Click on the “+” button on the left navigation tree, and select Create View option.
@@ -88,14 +95,18 @@
 
    ![Alt text](./images/17.jpg "Optional title")
    
-3. After creating the view, add “VIEW_CC_ERP” using the Add (+) option in the toolbar or drag and drop table from the left panel.
+3. After creating the view, add “TOP_CUSTOMERS_MOD” using the Add (+) option in the toolbar or drag and drop table from the left panel.
 
    ![Alt text](./images/18.jpg "Optional title")
    
 4. Create a calculated column by clicking on (+) option in the right panel. Enter name as “TOTAL_SALES_IN_LOCAL_CURR” and click More Options button to see columns operators and functions. Expand Currency Conversion functions and click convert_currency to perform ERP currency conversion. Enter expression as shown below and click OK.
 
+   ```sql
+   CONVERT_CURRENCY('000', 'M', TOTAL_SALES_IN_EUR, 'EUR', CURRENCY, CAST(NOW() as DATE))
+   ```
+
    ![Alt text](./images/19.jpg "Optional title")
    
-5. Save the created view and preview the data as shown below.
+5. Select all the columns and then save the created view. Click on preview to see the result.
 
    ![Alt text](./images/20.jpg "Optional title")

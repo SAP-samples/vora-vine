@@ -55,15 +55,21 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
 
    1. Download all the files from [here](../../archive/master.zip)
    
-   2. Copy the files present in the data folder to your container using the following command:-
+   2. Extract the downloaded content and open the command prompt.
+   
+   3. Navigate to the data folder and copy the files present in the data folder to your container using the following command:-
    
       `docker cp data <container name>:/tmp/data/`
       
-   3. Start the bash shell of the container using the following command:-
+      *to know your container name execute the following command, by default container name will be datahub*
+      
+      `docker ps`
+      
+   4. Start the bash shell of the container using the following command:-
    
       `docker exec -ti <Container id eg: 89a19a7df5e2> /bin/bash`
    
-   4. Push the files present in the data folder to HDFS.
+   5. Push the files present in the data folder to HDFS.
     
       `hdfs dfs –put /tmp/data/* /user/vora`
       
@@ -73,7 +79,7 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
       
       `hdfs dfs -mkdir /user/vora`
     	
-   5. Check if the files are correctly loaded in to HDFS.
+   6. Check if the files are correctly loaded in to HDFS.
     
       `hdfs dfs -ls /user/vora`
 

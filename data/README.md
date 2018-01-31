@@ -14,5 +14,3 @@
 
 - ADDRESS_HIER_INPUT is created using the file address_hierarchy which we have used for hierarchy
 
-![Alt text](./images/image.png "Optional title")
-

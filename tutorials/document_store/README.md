@@ -53,7 +53,7 @@
 
    ![Alt text](./images/9.jpg "Optional title")
    
-9.	We can also see data in json format by adding expression. For that again click on “switch to json” in the JSON part of view. A JSON Definition window will pop up where we have to enter the json expression.
+9.	We can also see data in json format by adding expression. For that again click on “switch to json” in the JSON part of view and click to '+' mark. A JSON Definition window will pop up where we have to enter the json expression.
    
     ![Alt text](./images/10.jpg "Optional title")
    
