@@ -67,7 +67,7 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
       
    4. Start the bash shell of the container using the following command:-
    
-      `docker exec -ti <Container id eg: 89a19a7df5e2> /bin/bash`
+      `docker exec -ti <container name> /bin/bash`
    
    5. Push the files present in the data folder to HDFS.
     
