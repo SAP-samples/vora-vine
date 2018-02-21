@@ -1,0 +1,14 @@
+ID,PREDECESSOR,ORDER,TYPE
+1,0,1,Clothes
+2,1,1,Men
+3,1,2,Women
+4,2,1,Shirts
+5,2,2,Shorts
+6,2,3,Suits
+7,3,1,Skirts
+8,3,2,Dresses
+9,3,3,Blouses
+10,6,1,Slacks
+11,6,2,Jackets
+12,8,1,EveningGowns
+13,8,2,SunDresses

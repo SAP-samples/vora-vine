@@ -1,0 +1,50 @@
+product,sub_product,issue,sub_issue,complaint_id
+Mortgage,Other mortgage,"Loan modification,collection,foreclosure",,511074
+Mortgage,Other mortgage,"Loan servicing, payments, escrow account",,511080
+Credit reporting,,Incorrect information on credit report,Account status,510473
+Student loan,Non-federal student loan,Repaying your loan,Repaying your loan,510326
+Debt collection,Credit card,False statements or representation,Attempted to collect wrong amount,511067
+Credit card,,Application processing delay,,510098
+Credit card,,Credit line increase/decrease,,511062
+Bank account or service,Checking account,Deposits and withdrawals,,511116
+Bank account or service,Checking account,Deposits and withdrawals,,511091
+Mortgage,Conventional adjustable mortgage (ARM),"Loan modification,collection,foreclosure",,530602
+Debt collection,"Other (i.e. phone, health club, etc.)",Cont'd attempts collect debt not owed,Debt was paid,509988
+Mortgage,Other mortgage,"Loan servicing, payments, escrow account",,511084
+Mortgage,Conventional adjustable mortgage (ARM),Credit decision / Underwriting,,511090
+Mortgage,Other mortgage,"Application, originator, mortgage broker",,510129
+Debt collection,Credit card,Communication tactics,Called outside of 8am-9pm,521353
+Credit card,,Late fee,,531853
+Debt collection,Credit card,Communication tactics,Used obscene/profane/abusive language,530622
+Credit reporting,,Incorrect information on credit report,Reinserted previously deleted info,540835
+Debt collection,Non-federal student loan,Improper contact or sharing of info,Talked to a third party about my debt,540355
+Credit reporting,,Incorrect information on credit report,Information is not mine,531346
+Credit card,,Billing disputes,,530624
+Debt collection,Non-federal student loan,Improper contact or sharing of info,Talked to a third party about my debt,540356
+Mortgage,FHA mortgage,"Loan modification,collection,foreclosure",,540357
+Debt collection,Credit card,Communication tactics,Called outside of 8am-9pm,521354
+Mortgage,Conventional fixed mortgage,"Loan modification,collection,foreclosure",,521356
+Bank account or service,Other bank product/service,"Making/receiving payments, sending money",,540359
+Bank account or service,Checking account,Deposits and withdrawals,,540360
+Credit card,,Rewards,,521360
+Debt collection,Mortgage,Communication tactics,Frequent or repeated calls,531855
+Mortgage,Conventional fixed mortgage,"Loan modification,collection,foreclosure",,510410
+Credit reporting,,Incorrect information on credit report,Reinserted previously deleted info,540836
+Bank account or service,Checking account,Deposits and withdrawals,,521364
+Mortgage,Conventional adjustable mortgage (ARM),"Loan servicing, payments, escrow account",,521365
+Debt collection,"Other (i.e. phone, health club, etc.)",False statements or representation,Attempted to collect wrong amount,520858
+Bank account or service,Checking account,Deposits and withdrawals,,521368
+Mortgage,FHA mortgage,"Loan servicing, payments, escrow account",,540368
+Consumer Loan,Vehicle loan,Managing the loan or lease,,530634
+Mortgage,Other mortgage,Settlement process and costs,,521371
+Debt collection,Non-federal student loan,Cont'd attempts collect debt not owed,Debt is not mine,521372
+Mortgage,Conventional fixed mortgage,"Loan servicing, payments, escrow account",,521374
+Debt collection,I do not know,Cont'd attempts collect debt not owed,Debt is not mine,511066
+Debt collection,I do not know,Taking/threatening an illegal action,Threatened to sue on too old debt,511115
+Debt collection,"Other (i.e. phone, health club, etc.)",Disclosure verification of debt,Not given enough info to verify debt,540371
+Credit card,,Identity theft / Fraud / Embezzlement,,540372
+Mortgage,Other mortgage,"Loan modification,collection,foreclosure",,530639
+Mortgage,Other mortgage,"Loan modification,collection,foreclosure",,530642
+Credit reporting,,Incorrect information on credit report,Account status,531850
+Debt collection,I do not know,Cont'd attempts collect debt not owed,Debt is not mine,511120
+Credit reporting,,Incorrect information on credit report,Reinserted previously deleted info,540383

@@ -1,0 +1,13 @@
+# {"name":"LEARNINGCONTENTS","property_indexes":["TITLE","NAME"]}
+["USER",1,[["NAME","Puntis"]],[["HAS_LEARNING_ITEM",9]]]
+["USER",2,[["NAME","Puntis"]],[["IS_INTERESTED_IN",7]]]
+["USER",3,[["NAME","Puntis"]],[["HAS_ORG_UNIT",12]]]
+["USER",4,[["NAME","Balaji"]],[["HAS_ORG_UNIT",12]]]
+["USER",5,[["NAME","Balaji"]],[["IS_INTERESTED_IN",7]]]
+["USER",6,[["NAME","Jason"]],[["IS_INTERESTED_IN",8]]]
+["TOPIC",7,[["TITLE","MACHINE LEARNNING"]],[["IS_RELATED_TO",8]]]
+["TOPIC",8,[["TITLE","MACHINE TEACHING"]],[["IS_RELATED_TO",7]]]
+["LEARNING_ITEM",9,[["TITLE","Introduction to Predictive Analytics"]],[["HAS_RELATED_TOPIC",7]]]
+["LEARNING_ITEM",10,[["TITLE","Introduction to Machine Teaching"]],[["HAS_RELATED_TOPIC",7]]]
+["LEARNING_ITEM",11,[["TITLE","Introduction to Machine Teaching"]],[["HAS_RELATED_TOPIC",8]]]
+["ORG_UNIT",12,[["NAME","PI_BIGDATA"]],[]]
