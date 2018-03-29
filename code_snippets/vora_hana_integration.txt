@@ -1,6 +1,8 @@
+Note: Vora Hana integration is no more supported in Vora tools however if you want to connect to HANA system use SAP HANA data source. for more information, see SAP HANA Data Source section of SAP Vora Developer Guide.
+
 ----------QUERY1----------
 CREATE TABLE SHINE_PRODUCTS
-USING com.sap.spark.hana
+USING sap.spark.hana
 OPTIONS (
 path "sap.hana.democontent.epm.data::MD.Products",
 dbschema "SAP_HANA_DEMO",
@@ -20,7 +22,6 @@ ON SO_HEADER.SALESORDERID = SO_ITEM.SALESORDERID
 INNER JOIN SHINE_PRODUCTS 
 ON SO_ITEM.PRODUCTID = SHINE_PRODUCTS.PRODUCTID
 ORDER BY SALESORDERID
-USING com.sap.spark.view
 
 ----------QUERY3----------
 SELECT * FROM ORDER_ITEM_DETAILS

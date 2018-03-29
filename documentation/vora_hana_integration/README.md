@@ -11,21 +11,6 @@ For the SAP Vora - SAP HANA Integration scenario, we will use SHINE (SAP HANA In
 4. Note down the SAP HANA System host ipaddress, instance Nnmber, HANA User Name, HANA User Password and tenantdatabase
 
 
-### Steps
-
-- Download the Apache Zeppelin notebook from following link [SAP VORA - SAP HANA Integration](./../../zeppelin_notebooks/vora_hana_integration.json)
-
-- Upload the notebook to Apache Zeppelin - < jumpbox >:9099 in case of vora cluster and < ip address >:9099 in case of dev edition. 
-      For help on how to upload Apache Zeppelin notebooks follow the steps in the [link](https://zeppelin.apache.org/docs/0.6.0/quickstart/explorezeppelinui.html)
-
-- The notebook will open up. Modify the QUERY 1 by entering the details of host, instance number, username and password of your hana system
-
-- Now you can click on Run all paragraphs button on top of the page to create tables in SAP Vora using       data from the existing     HDFS files preloaded on the instance. 
-
-     A dialog window will pop up asking you to confirm to Run all paragraphs? Click OK. 
-     ![Alt text](./images/run.PNG "Optional title")
-
-
 ### Queries
 Query 1
 - Create virtual table PRODUCTS in Vora from the HANA table sap.hana.democontent.epm.data::MD.Products under the Schema "SAP_HANA_DEMO".Other SAP HANA connectivuty details like , host, instance number, HANA User Name and HANA User Password also must be provided to facilitate the connection.
@@ -67,5 +52,3 @@ Query 3
    ```sql
     SELECT * FROM ORDER_ITEM_DETAILS 
    ```
-
- ![Alt text](./images/image01.PNG "Optional title")

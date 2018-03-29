@@ -9,7 +9,6 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
 - SQL statements
 - Documentation
 - Tutorials
-- Apache Zeppelin Notebooks
 
 
 
@@ -29,20 +28,6 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
    - Go to SAP Support Portal and select By Alphabetical Index (A-Z) -> alphabet L -> SAP Lumira -> SAP Lumira 1.0 -> Compromised Software component versions -> SAP Lumira 1.0 64 bit -> SAPLUMIRA6429P_3-20009491.EXE(version 1.29.3 or higher)
    
 
-3. Creating necessary tables and view
-    - Download the Apache Zeppelin notebook from following link [prerequisites](./zeppelin_notebooks/prerequisites.json)
-
-    - Upload the notebook to Apache Zeppelin - < hostname >:9099.
-      for help follow the steps in the [link](https://zeppelin.apache.org/docs/0.6.0/quickstart/explorezeppelinui.html)
-
-    - The notebook will open up. 
-    
-    - *If you are using SAP Vora 2.0 Cluster then change the interpreter to %vora from %vorathrift.( by default it has been set to %vorathrift   in all the Apache Zeppelin notebooks) as shown in image below*
-    
-    ![Alt text](./documentation/basic_sql/images/interpreter.png "Optional title")
-    - Now you can click on Run all paragraphs button on top of the page to create tables in SAP Vora using data from the existing             HDFS files preloaded on the instance. 
-
-    A dialog window will pop up asking you to confirm to Run all paragraphs? Click OK. 
       
       
 ## VINE Load Data
