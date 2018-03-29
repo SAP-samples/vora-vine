@@ -19,7 +19,7 @@ VINE makes it easy to learn how to consume SAP Vora features. It acts as referen
        
     OR
     
-    - [SAP Vora 2.0  Cluster](https://help.sap.com/http.svc/rc/f09ec811fe634f588647c342cac84c38/2.0/en-US/SAP_Vora_Installation_Admin_Guide_2.0_en.pdf)  
+    - [SAP Vora 2.1  Cluster](https://help.sap.com/doc/f09ec811fe634f588647c342cac84c38/2.1/en-US/SAP_Vora_Installation_Admin_Guide_2.1_en.pdf)  
   
     
 2. SAP Lumira
