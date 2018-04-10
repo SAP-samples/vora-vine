@@ -41,13 +41,13 @@ Schema in VORA allows one to logical grouping the database objects such as table
    ```sql
    CREATE TABLE BUSINESS_PARTNER_MOD (PARTNERID VARCHAR(50), PARTNERROLE  VARCHAR(50), EMAILADDRESS  VARCHAR(50), PHONENUMBER  VARCHAR(50), FAXNUMBER  VARCHAR(50), WEBADDRESS  VARCHAR(50), ADDRESSID  VARCHAR(50), COMPANYNAME  VARCHAR(50), LEGALFORM  VARCHAR(50), CREATEDBY_EMPLOYEEID  VARCHAR(50), CREATEDAT date, CHANGEDBY_EMPLOYEEID  VARCHAR(50), CHANGEDAT date, CURRENCY  VARCHAR(50)) STORE IN MEMORY
    
-   ALTER TABLE BUSINESS_PARTNER ADD DATASOURCE ORC(HDFS('hdfs://hdfs:9000/user/vora/businessPartner.orc'));
+   ALTER TABLE BUSINESS_PARTNER_MOD ADD DATASOURCE ORC(HDFS('hdfs://hdfs:9000/user/vora/businessPartner.orc'));
    
-   Load Table BUSINESS_PARTNER;
+   Load Table BUSINESS_PARTNER_MOD;
 
    ```
 
-   ![Alt text](./images/7.jpg "Optional title")
+   ![Alt text](./images/7.JPG "Optional title")
    
 10. Similarly Create the SO_HEADER_MOD table directly by running the below queries in SQL editor.
 
@@ -132,7 +132,7 @@ Schema in VORA allows one to logical grouping the database objects such as table
 
    ![Alt text](./images/17.jpg "Optional title")
    
-10. To create the ORDER_DETAILS_MOD view, go back to Modeler. Create a new sql view, name it as order_details. Add order_count, so_header, business_partner and addresses as a data source.
+10. To create the ORDER_DETAILS_MOD view, go back to Modeler. Create a new sql view, name it as ORDER_DETAILS_MOD. Add ORDER_COUNT_MOD, SO_HEADER_MOD, BUSINESS_PARTNER_MOD and ADDRESSES_MOD as a data source.
 
     ![Alt text](./images/18.jpg "Optional title")
     
