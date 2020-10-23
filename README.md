@@ -104,5 +104,6 @@ The steps to load VINE data to SAP Vora Developer Edition and SAP Vora Cluster i
 ## Support
 For any question/clarification or report an issue in VINE please [create issue](https://github.com/SAP/vora-vine/issues/new)
 
+
 ## License
-[Apache License 2.0](LICENSES/Apache-2.0.txt)
+Copyright (c) 2017-2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
