@@ -3,7 +3,7 @@ VINE
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/vora-vine)](https://api.reuse.software/info/github.com/SAP-samples/vora-vine)
 
-Vora INteractive Education(VINE) is a demo content for SAP Vora
+Vora INteractive Education (VINE) provides demo content for SAP Vora.
 
 ## Overview
 
